@@ -1,6 +1,7 @@
 from django import forms
 from .models import Book_a_table
 
+
 class UserReservationForm(forms.ModelForm):
 
     name = forms.CharField(
@@ -24,6 +25,7 @@ class UserReservationForm(forms.ModelForm):
             'class': 'form-control',
             'id': 'phone',
             'placeholder': 'Введите номер',
+            'pattern': '^(\d{3}[- .]?){2}\d{4}$',
             'data-rule': 'minlen:4',
             'data-msg': 'Please enter at least 4 chars',
         })
@@ -38,6 +40,7 @@ class UserReservationForm(forms.ModelForm):
             'id': 'email',
             'placeholder': 'Введите вашу почту',
             'data-rule': 'email',
+            'pattern': '(^[A-Za-z0-9]+[\w_]+.[\w_]+@[0-9A-Za-z]+\.[a-z]{2,7}$)',
             'data-msg': 'Please enter at least 4 chars',
         })
     )
