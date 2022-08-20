@@ -1,0 +1,24 @@
+<section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Why choose <span>Our Restaurant</span></h2>
+          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+        </div>
+
+      <div class="row">
+
+          {% for w in why_us %}
+              <div class="col-lg-4">
+                <div class="box">
+
+                  <h4>{{ w.name }}</h4>
+                  <p>{{ w.description }}</p>
+                </div>
+              </div>
+            {% endfor %}
+      </div>
+
+
+      </div>
+    </section><!-- End Whu Us Section -->
